@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 
+const randomNumberBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+class Number extends Component {
+    render() {
+        return <div className="number">{this.props.value}</div>;
+    }
+}
+
 export default class Game extends Component {
     render() {
         return (
           <div className="game">
             <div className="target">42</div>
-            <div className="challenge-numbers">
-              <div className="number">8</div>
-              <div className="number">5</div>
-              <div className="number">12</div>
-              <div className="number">13</div>
-              <div className="number">5</div>
-              <div className="number">16</div>
-            </div>
+            <Number value={8} />
+            <Number value={5} />
+            <Number value={12} />
+            <Number value={13} />
+            <Number value={5} />
+            <Number value={16} />
             <div className="footer">
               <div className="timer-value">10</div>
               <button>Start</button>
