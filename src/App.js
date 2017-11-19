@@ -6,7 +6,11 @@ import Game from './Game';
 class App extends Component {
   render() {
     return (
-      <Game />
+      <Game 
+        challengeSize={6} 
+        challengeRange={[2, 9]} 
+        initialSeconds={10}
+      />
     );
   }
 }
